@@ -10,7 +10,7 @@
     "postinstall": "node launchd.js install",
     "preuninstall": "node launchd.js uninstall"
   },
-  "devDependencies": {
+  "dependencies": {
     "plist": "^3.0.1"
   }
 }
