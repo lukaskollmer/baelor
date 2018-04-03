@@ -4,14 +4,14 @@ const {readFileSync, existsSync} = require('fs');
 const HOSTNAME = '127.0.0.1';
 const PORT = 6215;
 
-const filePathForDomain = domain => `${process.env.HOME}/.baelor/${domain}.js`;
+const filePathForDomain   = domain => `${process.env.HOME}/.baelor/${domain}.js`;
 const readScriptForDomain = domain => readFileSync(filePathForDomain(domain), 'utf-8');
 
 const server = createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
 
-  let scripts = {};
+  const scripts = {};
   if (existsSync(filePathForDomain('default'))) {
     scripts['default'] = readScriptForDomain('default');
   }
