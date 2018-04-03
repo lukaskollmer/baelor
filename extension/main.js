@@ -5,6 +5,7 @@ const main = async () => {
     response = await fetch(`http://localhost:6215/${location.hostname}`)
   } catch (err) {
     console.error(`Unable to find the baelor server (${err})`);
+    return;
   }
 
   const scripts = JSON.parse(await response.text());
