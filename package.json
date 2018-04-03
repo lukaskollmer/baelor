@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "run js every time you visit a website //TODO write a better description",
   "main": "server.js",
-  "repository": "https://github.com/lukaskollmer/maekar",
+  "repository": "https://github.com/lukaskollmer/baelor",
   "author": "Lukas Kollmer <lukas.kollmer@gmail.com>",
   "license": "MIT"
 }
