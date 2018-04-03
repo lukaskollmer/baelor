@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "baelor",
-  "description": "TODO description",
+  "description": "chrome extension to run scripts every time you visit a domain",
   "version": "1.0",
   "content_scripts": [
     {
