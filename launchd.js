@@ -17,7 +17,7 @@ if (command === 'install') {
     KeepAlive: true,
     ProgramArguments: [
       execSync('which node').toString().replace('\n', ''),
-      `${dirname}/server.js`
+      `${__dirname}/server.js`
     ]
   }
   writeFileSync(launchd_plist_filepath, plist.build(launchd_data))
