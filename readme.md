@@ -15,7 +15,7 @@ If you visit `mail.google.com`, baelor will attempt to run (in that order):
 
 ## Install
 - `npm install -g lukaskollmer/baelor`
-- [Install the extension](https://stackoverflow.com/questions/24577024/install-chrome-extension-not-in-the-store)
+- [Install the chrome extension](https://chrome.google.com/webstore/detail/baelor/mcplegldcmlkfdcpjgealhbfdecklpbp)
 
 > **NOTE**  
 > Installing the module will automatically set up a `launchd` agent in `~/Library/LaunchAgents`  
