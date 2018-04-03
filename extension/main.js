@@ -1,14 +1,17 @@
 const main = async () => {
-  try {
-    const response = await fetch(`http://localhost:6215/${location.hostname}`)
-    const scripts = JSON.parse(await response.text())
+  let response;
 
-    for (const [domain, script] of Object.entries(scripts)) {
-      console.log(`[lukaskollmer/baelor] Running custom script for domain '${domain}'`);
-      eval(script);
-    }
+  try {
+    response = await fetch(`http://localhost:6215/${location.hostname}`)
   } catch (err) {
     console.error(`Unable to find the baelor server (${err})`);
+  }
+
+  const scripts = JSON.parse(await response.text());
+
+  for (const [domain, script] of Object.entries(scripts)) {
+    console.log(`[lukaskollmer/baelor] Running custom script for domain '${domain}'`);
+    eval(script);
   }
 };
 
