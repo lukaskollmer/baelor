@@ -16,15 +16,12 @@ if (command === 'install') {
     Label: 'me.lukaskollmer.baelor',
     KeepAlive: true,
     ProgramArguments: [
-      '/Users/lukas/.config/fnm/bin/node',
-      '/Users/lukas/Developer/baelor/server.js'
+      execSync('which node').toString().replace('\n', ''),
+      `${dirname}/server.js`
     ]
   }
   writeFileSync(launchd_plist_filepath, plist.build(launchd_data))
   launchd('load')
-
-  const node_path = execSync('which node').toString().replace('\n', '')
-  console.log(node_path, __filename);
 
 } else if (command === 'uninstall') {
   launchd('unload')
