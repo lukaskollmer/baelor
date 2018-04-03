@@ -14,7 +14,7 @@ If you visit `mail.google.com`, baelor will attempt to run (in that order):
 3. `~/.baelor/mail.google.com.js`
 
 ## Install
-- `npm install -g lukaskollmer/baelor`
+- `npm install -g baelor`
 - [Install the chrome extension](https://chrome.google.com/webstore/detail/baelor/mcplegldcmlkfdcpjgealhbfdecklpbp)
 
 > **NOTE**  
