@@ -5,5 +5,12 @@
   "main": "server.js",
   "repository": "https://github.com/lukaskollmer/baelor",
   "author": "Lukas Kollmer <lukas.kollmer@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "node launchd.js install",
+    "preuninstall": "node launchd.js uninstall"
+  },
+  "devDependencies": {
+    "plist": "^3.0.1"
+  }
 }
