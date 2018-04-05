@@ -18,7 +18,7 @@ const server = createServer((req, res) => {
 
   const split = req.url.replace('/', '').split('.')
 
-  for (const i = split.length - 2; i >= 0; i--) { // 2 because we skip the last element (the tld)
+  for (let i = split.length - 2; i >= 0; i--) { // 2 because we skip the last element (the tld)
     try {
       const domain = split.slice(i, split.length).join('.')
       scripts[domain] = readScriptForDomain(domain)
