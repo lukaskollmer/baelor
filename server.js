@@ -16,15 +16,14 @@ const server = createServer((req, res) => {
     scripts['default'] = readScriptForDomain('default');
   }
 
-  try {
-    const split = req.url.replace('/', '').split('.');
+  const split = req.url.replace('/', '').split('.')
 
-    // 2 because we skip the last element (the tld)
-    for (let i = split.length - 2; i >= 0; i--) {
+  for (const i = split.length - 2; i >= 0; i--) { // 2 because we skip the last element (the tld)
+    try {
       const domain = split.slice(i, split.length).join('.');
       scripts[domain] = readScriptForDomain(domain);
-    }
-  } catch (e) {}
+    } catch (e) {}
+  }
 
   res.end(JSON.stringify(scripts));
 });
